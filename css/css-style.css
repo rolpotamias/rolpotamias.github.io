@@ -298,3 +298,15 @@ a:active {
 }
 
 
+.code-area {
+  background-color: #f7f7f7; /* Light grey background */
+  border: 1px solid #ddd; /* Light grey border */
+  border-radius: 4px; /* Rounded corners */
+  padding: 10px; /* Some padding around the text */
+  font-family: Consolas, "Courier New", monospace; /* Monospace font for code */
+  overflow: auto; /* Horizontal scrolling for long lines */
+  white-space: pre-line; /* Ensures that data is preformatted and wraps */
+  word-wrap: break-word; /* Breaks long words */
+  overflow: auto;
+  width: 600px;
+}
