@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href="./static/images/icon.png">
+  <meta charset="utf-8">
+  <meta name="description"
+        content="ShapeFusion: A 3D diffusion model for localized shape editing">
+  <meta name="keywords" content="3D Shape, Modeling, Mesh Diffusion Model, Localized Editing">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ShapeFusion: A 3D diffusion model for localized shape editing</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">ShapeFusion: A 3D diffusion model for localized shape editing</h1>          
+          <div class="is-size-4 publication-authors">
+            <span class="author-block">
+              <a href="">Rolandos Alexandros Potamias</a><sup></sup>,</span>
+              <span class="author-block">
+                <a href="">Michail Tarasiou</a><sup></sup>
+              </span>
+            <span class="author-block">
+              <a href="https://www.ploumpis.com/">Stylianos Ploumpis</a><sup></sup>,</span>
+            <span class="author-block">
+              <a href="https://www.imperial.ac.uk/people/s.zafeiriou">Stefanos Zafeiriou</a><sup></sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup></sup>Imperial College London, United Kingdom</span>
+          </div>
+          <br>
+          <span class="author-block">
+            <h1 class="title is-size-4  publication-venue"></h1>
+          </span>
+          <br>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="arxiv.org"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- arXiv Link. -->
+              <!-- <span class="link-block">
+                <a href="https://arxiv.org/abs/2112.00585"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+              <!-- Video Link. 
+              <span class="link-block">
+                <a href="https://youtu.be/F4hTHKZ8JNM"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+               </span>
+               -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (Soon) </span>
+                  </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/teaser.png" style="height: 400px; alt="method" class="center">
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+          In the realm of 3D computer vision, parametric models have emerged as a ground-breaking methodology for the creation of realistic and expressive 3D avatars. Traditionally, they rely on Principal Component Analysis (PCA), given its ability to decompose data to an orthonormal space that maximally captures shape variations. However, due to the orthogonality constraints and the global nature of PCA's decomposition, these models struggle to perform localized and disentangled editing of 3D shapes, which severely affects their use in applications requiring fine control such as face sculpting. In this paper, we leverage diffusion models to enable diverse and fully localized edits on 3D meshes, while completely preserving the un-edited regions. We propose an effective diffusion masking training strategy that, by design, facilitates localized manipulation of any shape region, without being limited to predefined regions or to sparse sets of predefined control vertices. Following our framework, a user can explicitly set their manipulation region of choice and define an arbitrary set of vertices as handles to edit a 3D mesh. Compared to the current state-of-the-art our method leads to more interpretable shape manipulations than methods relying on latent code state, greater localization and generation diversity while offering faster inference than optimization based approaches.   
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+    <!--/ Video. 
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">CVPR 2023 Presentation</h2>
+        <div class="publication-video">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/F4hTHKZ8JNM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+
+          </iframe>
+
+        </div>
+      </div>
+    </div>
+     -->
+  </div>
+</section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+    <!-- Method overview. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Overview</h2>
+        <div class="content has-text-justified">
+          <p>
+            We propose a masked 3D diffusion model for localized attribute manipulation and editing. During forward diffusion step, noise is gradually added to random regions of the mesh, indicated by a mask M. In the denoising step, a hierarchical network based on mesh convolution is used to learn a prior distribution of each attribute directly on the vertex space.    
+          </p>
+        <div>
+            <img src="./static/images/Method.png" alt="method" class="center">
+          </div>
+        <p>
+          In order to train a localized model we define a masked forward diffusion process that gradually adds noise to specific areas of the mesh as defined by a mask M. 
+          During training, we define the masked vertices as the <i>k</i>-hop geodesic neighborhood of a randomly selected anchor point. The remaining vertices, including the anchor point, remain unaffected. 
+          Using this masked diffusion process we <u> guarantee</u> local editing as well as full control of the generative process without employing an explicit conditional model. In contrast to the previous methods for disentangled manipulation, our approach not only ensures fully localized editing but also enables direct manipulation of any point and region of the mesh.
+        </p>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+  <!-- Method overview. -->
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h2 class="title is-3">Results</h2>
+      <div class="content has-text-justified">
+      <p>
+        In contrast to previous approaches, ShapeFusion can achieve highly localized manipulations explicitly defined by the user. Our masked diffusion approach enables edits that preserve the un-masked regions and the shape identity. In addition to shape manipulations, ShapeFusion can be used to manipulate localized expressions that follow the Facial Action Coding System (FACS), introducing a powerful tool for arbitrary size region editing. As shown in the following figure, ShapeFusion can not only edit global extreme expressions, similar to global parametric models, but can also generalize to out-of-distribution localized expressions, such as the smirk. 
+      </p>
+      </div>
+        <div>
+          <img src="./static/images/expressions.png" style="height: 500px; alt="method" class="center">
+        </div>
+      <div class="content has-text-justified">
+        <p>
+          A practical property of the proposed method is its ability to seamlessly swap distinct facial regions and components between different identities.
+        </p>
+      </div>
+      <div>
+          <img src="./static/images/swap.jpg" style="height: 500px; alt="method" class="center">
+      </div>
+      <div class="content has-text-justified">
+        <p>
+          In addition, ShapeFusion retains the generative properties of 3DMMs and can be easily adapted to reconstruction and fitting tasks.  
+        </p>
+      </div>
+      <div>
+          <img src="./static/images/reconstruction.png" alt="method" class="center">
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+  
+  
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@InProceedings{potamias_2024_shapefussion,
+      author    = {Potamias, Rolandos Alexandros and Tarasiou, Michail and Ploumpis, Stylianos and Zafeiriou, Stefanos},
+      title     = {ShapeFusion: A 3D diffusion model for localized shape editing},
+      booktitle = {Arxiv},
+      month     = {April},
+      year      = {2024},
+  }
+</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              The source code of this website is borrowed from <a
+                href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
