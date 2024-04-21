@@ -112,6 +112,5 @@ function resizeAndPlay(element)
   cv.height = element.videoHeight;
   element.play();
   element.style.height = "0px";  // Hide video without stopping it
-    
   playVids(element.id);
 }
