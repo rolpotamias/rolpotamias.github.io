@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href="./static/images/icon.png">
+  <meta charset="utf-8">
+  <meta name="description"
+        content="WiLoR: End-to-end 3D hand localization and reconstruction in-the-wild">
+  <meta name="keywords" content="Hand, 3D, Reconstruction, Pose Estimation, Localization, Detection">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WiLoR: End-to-end 3D hand localization and reconstruction in-the-wild</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+      .video-container {
+          display: flex;  /* Use flexbox to align videos side by side */
+          justify-content: center;
+          gap: 20px;  /* Space between the videos */
+      }
+
+      video {
+          width: 400px;  /* Set width of each video */
+          border: 2px solid black;
+          border-radius: 10px;
+      }
+  </style>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">WiLoR: End-to-end 3D hand localization and reconstruction in-the-wild</h1>          
+          <div class="is-size-4 publication-authors">
+            <span class="author-block">
+              <a href="https://rolpotamias.github.io/">Rolandos Alexandros Potamias</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="">Jinglei Zhang</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://jiankangdeng.github.io/">Jiankang Deng</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.imperial.ac.uk/people/s.zafeiriou">Stefanos Zafeiriou</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Imperial College London, United Kingdom</span>
+            <span class="author-block"><sup>2</sup>Shanghai Jiao Tong University, China</span>
+          </div>
+          <br>
+          <span class="author-block">
+            <h1 class="title is-size-4  publication-venue"></h1>
+          </span>
+          <br>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://rolpotamias.github.io/pdfs/WiLoR.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- arXiv Link. -->
+              <!-- <span class="link-block">
+                <a href="https://arxiv.org/abs/2112.00585"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+              <!-- Video Link. -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/rolpotamias/WiLoR"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Models</span>
+                  </a>
+              <span class="link-block">
+                    <a href="https://github.com/rolpotamias/WiLoR"
+                       class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                         <i class="fa fa-database" aria-hidden="true"></i>
+                      </span>
+                    <span>Dataset (soon)</span>
+                    </a>
+              <span class="link-block">
+                      <a href="https://huggingface.co/spaces/rolpotamias/WiLoR"
+                         class="external-link button is-normal is-rounded is-dark">
+                        <span>🤗 Demo</span>
+                      </a>
+                    </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/teaser.png" alt="teaser" class="center">
+    </div>
+    <div class="video-container">
+      <!-- First video -->
+      <video controls>
+          <source src="./static/images/video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+      </video>
+
+      <!-- Second video -->
+      <video controls>
+          <source src="./static/images/video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+      </video>
+  </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            In recent years, 3D hand pose estimation methods has garnered significant attention due to their extensive applications in human-computer interaction, virtual reality, and robotics. In contrast, there has been a notable gap in hand detection pipelines, posing significant challenges in constructing effective real-world multi-hand reconstruction systems.
+            In this work, we present a data-driven pipeline for efficient multi-hand reconstruction in the wild. The proposed pipeline is composed of two components: a real-time fully convolutional hand localization and a high fidelity transformer-based 3D hand reconstruction model. To tackle the limitations of previous methods and build a robust and stable detection network, we introduce a large-scale dataset with over than 2M in-the-wild hand images with diverse lighting, illumination and occlusion conditions. Our approach outperforms previous methods in both efficiency and accuracy on popular 2D and 3D benchmarks. Finally, we showcase the effectiveness of our pipeline to achieve smooth 3D hand tracking from monocular videos, without modeling any temporal components.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+    
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+    <!-- Method overview. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Overview</h2>
+        <div class="content has-text-justified">
+        <p>
+            WiLoR is a mutli-hand localization and reconstruction framework. Using a real-time detection and localization model, WiLoR can reconstruct multiple hands with high-fidelity.
+        </p>
+        <div>
+            <img src="./static/images/Reconstruction_method.png" alt="method" class="center">
+        </div>
+        <p>
+          Given an image \( \mathbf{I}_h \) represented as a series of feature tokens \( \mathbf{T}_{img} \) along with a set of learnable camera tokens \( \mathbf{T}_{cam} \), pose tokens \( \mathbf{T}_{pose} \), and shape tokens \( \mathbf{T}_{shape} \), we initially predict a rough estimation of the MANO \cite{mano} and camera parameters \( \mathbf{K}_{cam} \) using a ViT backbone (<span style="color:cyan;">light blue</span>). The updated image tokens are then reshaped and upsampled through a series of deconvolutional layers to form a set of multi-resolution feature maps \( \{ \mathbf{F}_0, \dots, \mathbf{F}_n \} \). We then project the estimated 3D hand to the generated feature maps and sample image-aligned multi-scale features through a novel refinement module (<span style="color:violet;">purple</span>) that will be used to predict pose and shape residuals \( \Delta\theta, \Delta\beta \). Using this coarse-to-fine pose estimation strategy, we facilitate image alignment and achieve better reconstruction performance. 
+        </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container is-max-desktop">
+  <!-- Method overview. -->
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h2 class="title is-3">Reconstruction Performance</h2>
+      <div class="content has-text-justified">
+      <p>
+          WiLoR significantly advances state-of-the-art 3D hand pose estimation, outperforming previous methods on benchmark FreiHAND and HO3D datasets.
+      </p>
+      <div>
+          <img src="./static/images/FreihandComparison.png" alt="method" class="center">
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>  
+  
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{potamias2024wilor,
+      title={WiLoR: End-to-end 3D hand localization and reconstruction in-the-wild},
+      author={Potamias, Rolandos Alexandros and Zhang, Jinglei and Deng, Jiankang and Zafeiriou, Stefanos},
+      journal={arXiv},
+      year={2024}
+    }
+</code></pre>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Acknowledgements</h2>
+    S. Zafeiriou was supported by EPSRC Project DEFORM (EP/S010203/1) and GNOMON (EP/X011364). R.A. Potamias was supported
+by EPSRC Project GNOMON (EP/X011364).
+  </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              The source code of this website is borrowed from <a
+                href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
