@@ -37,9 +37,22 @@
       }
 
       video {
-          width: 400px;  /* Set width of each video */
+          width: 300px;  /* Adjust the width of each video to fit three on screen */
           border: 2px solid black;
           border-radius: 10px;
+      }
+
+      /* Make sure the videos are responsive on smaller screens */
+      @media (max-width: 900px) {
+          .video-container {
+              flex-direction: column;  /* Stack videos vertically on smaller screens */
+              align-items: center;
+          }
+
+          video {
+              width: 100%;  /* Make the videos take full width on smaller screens */
+              max-width: 500px;  /* Limit the width on smaller screens */
+          }
       }
   </style>
 </head>
@@ -105,7 +118,7 @@
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Models</span>
+                  <span>Code</span>
                   </a>
               <span class="link-block">
                     <a href="https://github.com/rolpotamias/WiLoR"
@@ -136,16 +149,23 @@
     <div class="hero-body">
       <img src="./static/images/teaser.png" alt="teaser" class="center">
     </div>
+
     <div class="video-container">
       <!-- First video -->
       <video controls>
-          <source src="./static/images/video.mp4" type="video/mp4">
+        <source src="https://rolpotamias.github.io/WiLoR/static/images/video_0.mp4" type="video/mp4">
           Your browser does not support the video tag.
       </video>
 
       <!-- Second video -->
       <video controls>
-          <source src="./static/images/video.mp4" type="video/mp4">
+        <source src="https://rolpotamias.github.io/WiLoR/static/images/video_2.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+      </video>
+
+      <!-- Third video -->
+      <video controls>
+          <source src="https://rolpotamias.github.io/WiLoR/static/images/video_1.mp4" type="video/mp4">
           Your browser does not support the video tag.
       </video>
   </div>
