@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href="./static/images/icon.png">
+  <meta charset="utf-8">
+  <meta name="description"
+        content="ImHead: A Large-scale Implicit Morphable Model for Localized Head Modeling">
+  <meta name="keywords" content="3D Shape, Modeling, 3DMMs, Implicit Head Model, Localized Editing">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ImHead: A Large-scale Implicit Morphable Model for Localized Head Modeling</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">ShapeFusion: A 3D diffusion model for localized shape editing</h1>          
+          <div class="is-size-4 publication-authors">
+            <span class="author-block">
+              <a href="">Rolandos Alexandros Potamias</a><sup></sup>,</span>
+              <span class="author-block">
+                <a href="https://stathisgln.github.io/">Stathis Galanakis,</a><sup></sup>
+              </span>
+            <span class="author-block">
+              <a href="https://jiankangdeng.github.io/">Jiankang Deng</a><sup></sup>,</span>
+            <span class="author-block">
+              <a href="https://apapaion.github.io/">Athanasios Papaioannou</a><sup></sup>,</span>
+            <span class="author-block">
+              <a href="https://www.imperial.ac.uk/people/s.zafeiriou">Stefanos Zafeiriou</a><sup></sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup></sup>Imperial College London, United Kingdom</span>
+          </div>
+          <br>
+          <span class="author-block">
+            <h1 class="title is-size-4  publication-venue"></h1>
+          </span>
+          <br>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2510.10793"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- arXiv Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2510.10793"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> 
+              <span class="link-block">
+                    <a href="https://drive.google.com/drive/folders/12zhr7vWRKhCdZg71KJ_4Spr0gH2MnfHt"
+                       class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                         <i class="fa fa-database" aria-hidden="true"></i>
+                      </span>
+                    <span>Dataset</span>
+                    </a>
+              <span class="link-block">
+                    <a href=""
+                       class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                         <i class="fa fa-fire" aria-hidden="true"></i>
+                      </span>
+                    <span>Model</span>
+                    </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/Teaser-min.png" alt="method" class="center">
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+          Over the last years, 3D morphable models (3DMMs) have emerged as a state-of-the-art methodology for modeling and generating expressive 3D avatars. 
+However, given their reliance on a strict topology, along with their linear nature, they struggle to represent complex full-head shapes.  
+Following the advent of deep implicit functions, we propose imHead, a novel implicit 3DMM that not only models expressive 3D head avatars but also facilitates localized editing of the facial features. 
+Previous methods directly divided the latent space into local components accompanied by an identity encoding to capture the global shape variations, leading to expensive latent sizes. 
+In contrast, we retain a single compact identity space and introduce an intermediate region-specific latent representation to enable local edits. 
+To train imHead, we curate a large-scale dataset of 4K distinct identities, making a step-towards large scale 3D head modeling. 
+Under a series of experiments we demonstrate the expressive power of the proposed model to represent diverse identities and expressions outperforming previous approaches. 
+Additionally, the proposed approach provides an interpretable solution for 3D face manipulation, allowing the user to make localized edits. 
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+    <!--/ Video. 
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">CVPR 2023 Presentation</h2>
+        <div class="publication-video">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/F4hTHKZ8JNM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+
+          </iframe>
+
+        </div>
+      </div>
+    </div>
+     -->
+  </div>
+</section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+    <!-- Method overview. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Overview</h2>
+        <div class="content has-text-justified">
+          <p>
+          In this work, we introduce imHead, the first large-scale implicit model of the human head, that supports localized face editing, advancing the field of high-fidelity 3D head modeling.  
+          </p>
+        <div>
+            <img src="./static/images/MethodFigure_min.png" alt="method" class="center">
+          </div>
+        <p>
+        To do so, we curate a large scale dataset that is 10x- bigger than previous full head datasets. 
+We highlight the limitations of previous methods in capturing both global and local fields in a stratified manner and propose an effective strategy that enables both compact latent space and localized editing properties.  
+        </p>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+  <!-- Method overview. -->
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h2 class="title is-3">Results</h2>
+      <div class="content has-text-justified">
+      <h2 class="title is-5">Reconstruction Performance</h2>
+      </div>
+        <div>
+          <img src="./static/images/Main_comparison-min.png" style="height: 500px; alt="method" class="center">
+        </div>
+      <div class="content has-text-justified">
+        <h2 class="title is-5">Localized Editing</h2>
+        <p>
+          A practical property of the proposed method is its ability to seamlessly edit and swap facial regions and components between different identities.
+        </p>
+      </div>
+      <div>
+          <img src="./static/images/region_sampling-min.png" alt="method" class="center">
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+  
+  
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{potamias2025imhead,
+    title={ImHead: A Large-scale Implicit Morphable Model for Localized Head Modeling},
+    author={Rolandos Alexandros Potamias and Stathis Galanakis and Jiankang Deng and Athanasios Papaioannou and Stefanos Zafeiriou},
+    year={2025},
+    eprint={2510.10793},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
+}
+</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              The source code of this website is borrowed from <a
+                href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
