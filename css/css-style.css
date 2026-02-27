@@ -310,3 +310,17 @@ a:active {
   overflow: auto;
   width: 600px;
 }
+/* Highlighted Paper Styling */
+.highlighted-paper {
+    background-color: rgba(0, 123, 255, 0.05); /* Very light blue tint */
+    border-left: 5px solid #007bff;          /* Blue vertical accent line */
+    padding-left: 15px;                        /* Spacing from the accent line */
+    border-radius: 4px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.highlighted-paper:hover {
+    background-color: rgba(0, 123, 255, 0.08); /* Darkens slightly on hover */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
